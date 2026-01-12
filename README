@@ -22,6 +22,7 @@ ETL → aggregation → visualization → insights.
 - Texas, Florida, and California have the highest loan concentration.
 
 ## Dashboard Preview
+https://github.com/dvnguyin/Freddie-Loan-Analytics/blob/main/screenshots/Freddie%20Loan%20Analytics%20Dashboard.png
 
 ## How to Run
 1. Place raw data in `data_raw/`
