@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: freddie_pg
+    environment:
+      POSTGRES_USER: freddie
+      POSTGRES_PASSWORD: freddie_pw
+      POSTGRES_DB: freddie_analytics
+    ports:
+      - "5432:5432"
+    volumes:
+      - freddie_pg_data:/var/lib/postgresql/data
+
+volumes:
+  freddie_pg_data:

@@ -1,0 +1,20 @@
+from pathlib import Path
+import os
+from dotenv import load_dotenv
+from sqlalchemy import create_engine, text
+
+def main():
+    load_dotenv()
+    engine = create_engine(
+        f"postgresql+psycopg2://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}"
+        f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
+    )
+
+    sql = Path("sql/02_views_orig.sql").read_text(encoding="utf-8")
+    with engine.begin() as conn:
+        conn.execute(text(sql))
+
+    print("Created views: v_loans_by_state, v_loans_by_credit_band, v_loans_by_cltv_band, v_loans_by_purpose")
+
+if __name__ == "__main__":
+    main()

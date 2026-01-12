@@ -1,0 +1,29 @@
+# Freddie Mac Loan Analytics Dashboard
+
+## Overview
+This project analyzes Freddie Mac mortgage origination data to explore
+credit quality, loan-to-value (CLTV) risk, and geographic loan concentration.
+The goal is to demonstrate an end-to-end analytics workflow:
+ETL → aggregation → visualization → insights.
+
+## Tools & Technologies
+- Python (pandas)
+- Power BI
+- CSV / Parquet data formats
+
+## Key Analyses
+- Loan volume by credit score band
+- Loan volume by CLTV band
+- Top U.S. states by loan count
+
+## Key Insights
+- Most loans fall in the 740+ credit score band, indicating strong borrower quality.
+- Lower CLTV bands (<80) dominate loan volume, suggesting conservative lending.
+- Texas, Florida, and California have the highest loan concentration.
+
+## Dashboard Preview
+
+## How to Run
+1. Place raw data in `data_raw/`
+2. Run ETL scripts in `etl/`
+3. Open the Power BI dashboard in `dashboard/`
