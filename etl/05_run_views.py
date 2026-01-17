@@ -10,7 +10,7 @@ def main():
         f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
     )
 
-    sql = Path("sql/02_views_orig.sql").read_text(encoding="utf-8")
+    sql = Path("sql/03_views.sql").read_text(encoding="utf-8")
     with engine.begin() as conn:
         conn.execute(text(sql))
 
